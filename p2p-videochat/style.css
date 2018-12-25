@@ -18,7 +18,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .pure-button-success {
-  background: rgb(28, 184, 50); /* this is a green */
+  background: rgb(28, 184, 65); /* this is a green */
 }
 .pure-button-error {
   background: rgb(202, 60, 60); /* this is a maroon */
@@ -40,7 +40,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 #my-video {
   margin-top: 15px;
-  width: 700px;
+  width: 280px;
   height: auto;
   background-color: #eee;
 }
@@ -48,7 +48,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 #their-video {
   position: -webkit-sticky;
   width: 100%;
-  height: 50%;
+  height: 75%;
   max-height: 480px;
   background-color: #eee;
 }
