@@ -50,7 +50,6 @@ $(function() {
   const audioSelect = $('#audioSource');
   const videoSelect = $('#videoSource');
   const selectors = [audioSelect, videoSelect];
-  
 
   navigator.mediaDevices.enumerateDevices()
     .then(deviceInfos => {
