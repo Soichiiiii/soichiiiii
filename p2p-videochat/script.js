@@ -48,7 +48,7 @@ $(function() {
 
   // set up audio and video input selectors
   const audioSelect = $('#audioSource');
-  //const videoSelect = $('#videoSource');
+  const videoSelect = $('#videoSource');
   //const selectors = [audioSelect, videoSelect];
   const selectors = [audioSelect];
 
