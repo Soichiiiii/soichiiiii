@@ -48,8 +48,9 @@ $(function() {
 
   // set up audio and video input selectors
   const audioSelect = $('#audioSource');
-  const videoSelect = $('#videoSource');
-  const selectors = [audioSelect, videoSelect];
+  //const videoSelect = $('#videoSource');
+  //const selectors = [audioSelect, videoSelect];
+  const selectors = [audioSelect];
 
   navigator.mediaDevices.enumerateDevices()
     .then(deviceInfos => {
@@ -91,20 +92,20 @@ $(function() {
   function step1() {
     // Get audio/video stream
     const audioSource = $('#audioSource').val();
-    const videoSource = $('#videoSource').val();
+    //const videoSource = $('#videoSource').val();
     const constraints = {
       audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
-      video: {deviceId: videoSource ? {exact: videoSource} : undefined},
+      //video: {deviceId: videoSource ? {exact: videoSource} : undefined},
     };
 
-    navigator.mediaDevices.getUserMedia(constraints).then(stream => {
-      $('#my-video').get(0).srcObject = stream;
-      localStream = stream;
+    //navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+    //  $('#my-video').get(0).srcObject = stream;
+    //  localStream = stream;
 
-      if (existingCall) {
-        existingCall.replaceStream(stream);
-        return;
-      }
+    //  if (existingCall) {
+    //    existingCall.replaceStream(stream);
+    //    return;
+    //  }
 
       step2();
     }).catch(err => {
@@ -125,11 +126,11 @@ $(function() {
       existingCall.close();
     }
     // Wait for stream on the call, then set peer video display
-    call.on('stream', stream => {
-      const el = $('#their-video').get(0);
-      el.srcObject = stream;
-      el.play();
-    });
+    //call.on('stream', stream => {
+    //  const el = $('#their-video').get(0);
+    //  el.srcObject = stream;
+    //  el.play();
+    //});
 
     // UI stuff
     existingCall = call;
