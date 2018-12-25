@@ -98,14 +98,14 @@ $(function() {
       //video: {deviceId: videoSource ? {exact: videoSource} : undefined},
     };
 
-    //navigator.mediaDevices.getUserMedia(constraints).then(stream => {
-    //  $('#my-video').get(0).srcObject = stream;
-    //  localStream = stream;
+    navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+      $('#my-video').get(0).srcObject = stream;
+      localStream = stream;
 
-    //  if (existingCall) {
-    //    existingCall.replaceStream(stream);
-    //    return;
-    //  }
+      if (existingCall) {
+        existingCall.replaceStream(stream);
+        return;
+      }
 
       step2();
     }).catch(err => {
