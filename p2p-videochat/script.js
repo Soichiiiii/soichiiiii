@@ -48,8 +48,9 @@ $(function() {
 
   // set up audio and video input selectors
   const audioSelect = $('#audioSource');
-  const videoSelect = $('#videoSource');
-  const selectors = [audioSelect, videoSelect];
+  //const videoSelect = $('#videoSource');
+  //const selectors = [audioSelect, videoSelect];
+  const selectors = [audioSelect];
 
   navigator.mediaDevices.enumerateDevices()
     .then(deviceInfos => {
@@ -84,17 +85,17 @@ $(function() {
         }
       });
 
-      videoSelect.on('change', step1);
+      //videoSelect.on('change', step1);
       audioSelect.on('change', step1);
     });
 
   function step1() {
     // Get audio/video stream
     const audioSource = $('#audioSource').val();
-    const videoSource = $('#videoSource').val();
+    //const videoSource = $('#videoSource').val();
     const constraints = {
       audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
-      video: {deviceId: videoSource ? {exact: videoSource} : undefined},
+      //video: {deviceId: videoSource ? {exact: videoSource} : undefined},
     };
 
     navigator.mediaDevices.getUserMedia(constraints).then(stream => {
