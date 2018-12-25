@@ -126,11 +126,11 @@ $(function() {
       existingCall.close();
     }
     // Wait for stream on the call, then set peer video display
-    //call.on('stream', stream => {
-    //  const el = $('#their-video').get(0);
-    //  el.srcObject = stream;
-    //  el.play();
-    //});
+    call.on('stream', stream => {
+      const el = $('#their-video').get(0);
+      el.srcObject = stream;
+      el.play();
+    });
 
     // UI stuff
     existingCall = call;
