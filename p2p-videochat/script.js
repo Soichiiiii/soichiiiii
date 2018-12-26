@@ -95,10 +95,8 @@ $(function() {
     const constraints = {
       audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
       video: {deviceId: videoSource ? {exact: videoSource} : undefined},
-      //video: false,
     };
-    //navigator.mediaDevices.getUserMedia({video: false, audio: true})
-    //.then(function (stream) {
+
     navigator.mediaDevices.getUserMedia(constraints).then(stream => {
       $('#my-video').get(0).srcObject = stream;
       localStream = stream;
