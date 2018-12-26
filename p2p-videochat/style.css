@@ -54,14 +54,13 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 #video-container {
-  padding: 10px;
+  padding: 25px;
   text-align: center;
 }
 
 #step1-error, #step2, #step3 {
   display: none;
 }
-
 #my-id {
   font-weight: bold;
 }
